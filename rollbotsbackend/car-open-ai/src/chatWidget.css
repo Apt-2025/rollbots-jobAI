@@ -1,0 +1,21 @@
+/* Example: Change widget background and header color */
+.rcw-conversation-container {
+  background: #f5f5fa; /* Widget background */
+}
+
+.rcw-header {
+  background: #1e90ff; /* Header background */
+  color: #fff;         /* Header text color */
+}
+
+.rcw-launcher {
+  background: #1e90ff; /* Launcher button color */
+}
+
+.rcw-message .rcw-client {
+  background: #e0f7fa; /* User message bubble */
+}
+
+.rcw-message .rcw-response {
+  background: #e3e3e3; /* Bot message bubble */
+}

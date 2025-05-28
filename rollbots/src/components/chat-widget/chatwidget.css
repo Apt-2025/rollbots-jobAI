@@ -1,0 +1,185 @@
+/* Chat container */
+.rcw-conversation-container {
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.rcw-header {
+  background-color: #6415ff !important;
+  color: white !important;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e6e6e6;
+  text-align: center;
+  position: relative;
+}
+
+/* Fix close (X) button positioning */
+.rcw-close-button {
+  position: absolute !important;
+  top: 12px !important;
+  right: 12px !important;
+  font-size: 20px !important;
+  color: white !important;
+}
+
+/* Messages container */
+.rcw-messages-container {
+  background-color: #f7f9fc;
+  padding: 12px;
+  flex: 1;
+  width: 50vh;
+  overflow-y: auto;
+}
+
+/* Each message */
+.rcw-message {
+  margin-bottom: 10px;
+}
+
+/* Messages from the user */
+.rcw-client .rcw-message-text {
+  background-color: #6415ff;
+  color: white;
+  border-radius: 12px 12px 0 12px;
+  padding: 10px 14px;
+  margin-left: auto;
+  font-size: 14px;
+}
+
+/* Messages from the bot */
+.rcw-response .rcw-message-text {
+  background-color: #e5e5ea;
+  color: #000;
+  border-radius: 12px 12px 12px 0;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+/* Message text */
+.rcw-message-text {
+  line-height: 1.4;
+}
+
+/* Input section */
+.rcw-new-message {
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Input field */
+
+.rcw-input:focus {
+  outline: none;
+  background-color: #eaeaea;
+}
+
+/* Send button */
+.rcw-send {
+  background-color: #6415ff;
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.rcw-send:hover {
+  background-color: #6415ff;
+}
+
+/* Avatar (if enabled) */
+.rcw-avatar {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+/* Launcher button */
+.rcw-launcher {
+  bottom: 24px !important;
+  right: 24px !important;
+  background: #6415ff;
+}
+
+.chat-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* spacing between emoji, input, and send */
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.chat-input-wrapper input {
+  flex-grow: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.send-button,
+.emoji-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.chat-toggle-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #00aaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.rcw-open-launcher{
+    display: inline;
+}
+
+.rcw-close-launcher{display: inline;}
+
+.rcw-conversation-container .avatar{
+    display: inline;}
+
+.rcw-input {
+  display: block;
+  width: 200px;
+  max-height: 150px; 
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
+  line-height: 1.4;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  flex: 1;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  background-color: #f0f0f0;
+
+
+}

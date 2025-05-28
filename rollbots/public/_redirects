@@ -1,0 +1,5 @@
+# Redirect from any subpath on your domain to a new URL, keeping the path structure
+http://malaysia.rollbots.ai/* https://rollbots.ai/:splat 301!
+
+# Redirect any traffic (including base URL) to index.html
+/*  /index.html  200
