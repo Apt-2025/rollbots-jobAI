@@ -1,0 +1,168 @@
+openapi: 3.1.0
+info:
+  title: Asia Job Listings API (Simulated)
+  version: 2.0.0
+  description: |
+    Simulated API for job searches from the top 5 platforms across Malaysia, Singapore, Hong Kong, Macau, Taiwan, and South Korea.
+    Results include platform, title, salary, requirements, and a simulated clickable job search URL.
+
+servers:
+  - url: https://jobsearch.example.com
+    description: Simulated server for job listings
+
+paths:
+  /jobstreet-my/search:
+    get:
+      operationId: searchJobstreetMalaysia
+      summary: Simulate job search on JobStreet Malaysia
+      parameters:
+        - name: keyword
+          in: query
+          schema:
+            type: string
+            example: software engineer
+        - name: location
+          in: query
+          schema:
+            type: string
+            example: Kuala Lumpur
+      responses:
+        '200':
+          description: JobStreet Malaysia search
+          content:
+            application/json:
+              example:
+                platform: JobStreet Malaysia
+                title: Software Engineer
+                location: Kuala Lumpur
+                salary: "MYR 4,000 - 6,000"
+                requirements:
+                  - Bachelor's degree in Computer Science
+                  - 2+ years experience in software development
+                  - Familiarity with REST APIs and Git
+                searchUrl: https://www.jobstreet.com.my/software-engineer-jobs-in-kuala-lumpur/
+                note: This is a simulated search result.
+
+  /mycareersfuture-sg/search:
+    get:
+      operationId: searchMyCareersFuture
+      summary: Simulate job search on MyCareersFuture Singapore
+      parameters:
+        - name: keyword
+          in: query
+          schema:
+            type: string
+            example: data analyst
+        - name: location
+          in: query
+          schema:
+            type: string
+            example: Singapore
+      responses:
+        '200':
+          description: MyCareersFuture search result
+          content:
+            application/json:
+              example:
+                platform: MyCareersFuture
+                title: Data Analyst
+                location: Singapore
+                salary: "SGD 3,500 - 5,000"
+                requirements:
+                  - Diploma or degree in Statistics or Analytics
+                  - Proficiency in SQL and Excel
+                searchUrl: https://www.mycareersfuture.gov.sg/search?search=data%20analyst
+                note: Simulated listing only
+
+  /jobsdb-hk/search:
+    get:
+      operationId: searchJobsDBHongKong
+      summary: Simulate job search on JobsDB Hong Kong
+      parameters:
+        - name: keyword
+          in: query
+          schema:
+            type: string
+            example: marketing executive
+        - name: location
+          in: query
+          schema:
+            type: string
+            example: Hong Kong
+      responses:
+        '200':
+          description: JobsDB HK search result
+          content:
+            application/json:
+              example:
+                platform: JobsDB Hong Kong
+                title: Marketing Executive
+                location: Hong Kong
+                salary: "HKD 18,000 - 25,000"
+                requirements:
+                  - Degree in Marketing or Business
+                  - 2+ years experience in marketing
+                searchUrl: https://hk.jobsdb.com/marketing-executive-jobs-in-hong-kong/
+                note: Simulated listing
+
+  /104tw/search:
+    get:
+      operationId: search104Taiwan
+      summary: Simulate job search on 104.com.tw (Taiwan)
+      parameters:
+        - name: keyword
+          in: query
+          schema:
+            type: string
+            example: frontend developer
+        - name: location
+          in: query
+          schema:
+            type: string
+            example: Taipei
+      responses:
+        '200':
+          description: 104.com.tw search result
+          content:
+            application/json:
+              example:
+                platform: 104.com.tw
+                title: Frontend Developer
+                location: Taipei
+                salary: "TWD 50,000 - 70,000"
+                requirements:
+                  - HTML/CSS/JS knowledge
+                  - Experience with Vue.js or React
+                searchUrl: https://www.104.com.tw/jobs/search/?keyword=frontend+developer
+                note: Simulated listing only
+
+  /jobkorea/search:
+    get:
+      operationId: searchJobKorea
+      summary: Simulate job search on JobKorea (South Korea)
+      parameters:
+        - name: keyword
+          in: query
+          schema:
+            type: string
+            example: UI designer
+        - name: location
+          in: query
+          schema:
+            type: string
+            example: Seoul
+      responses:
+        '200':
+          description: JobKorea search result
+          content:
+            application/json:
+              example:
+                platform: JobKorea
+                title: UI Designer
+                location: Seoul
+                salary: "KRW 3,000,000 - 4,500,000"
+                requirements:
+                  - Degree in Graphic Design or similar
+                  - Portfolio of UI projects
+                searchUrl: https://www.jobkorea.co.kr/Search/?stext=UI+designer
+                note: Simulated listing

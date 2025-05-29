@@ -5,7 +5,7 @@ import fs from 'fs';
 const router = express.Router();
 
 // Load YAML once at startup
-const yamlData = yaml.load(fs.readFileSync('Hotel_HR.yaml', 'utf8'));
+const yamlData = yaml.load(fs.readFileSync('Asian_jobs.yaml', 'utf8'));
 
 // Example endpoint for JobStreet Malaysia
 router.get('/jobstreet-my/search', (req, res) => {
